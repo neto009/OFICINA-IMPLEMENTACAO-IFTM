@@ -14,15 +14,7 @@ Adicione as dependências necessárias no arquivo pom.xml para integração com 
 
 ---
 
-## ⚙️ Prompt 2: Configurar application.yml
-
-```
-Ignore o arquivo application.yml porque já está configurado com a chave da API do OpenAI.
-```
-
----
-
-## 🔧 Prompt 3: Implementar EmbeddingService
+## 🔧 Prompt 2: Implementar EmbeddingService
 
 ```
 Complete a implementação do método embed() na classe EmbeddingService que:
@@ -36,7 +28,7 @@ O método já tem a assinatura: public List<float[]> embed(List<String> text)
 
 ---
 
-## 📚 Prompt 4: Criar ProductLoaderService
+## 📚 Prompt 3: Criar ProductLoaderService
 
 ```
 Crie uma classe ProductLoaderService no pacote br.edu.iftm.agent.service que:
@@ -53,24 +45,7 @@ Crie uma classe ProductLoaderService no pacote br.edu.iftm.agent.service que:
 
 ---
 
-## 📄 Prompt 5: Criar FAQLoaderService
-
-```
-Crie uma classe FAQLoaderService no pacote br.edu.iftm.agent.service que:
-1. Seja anotada com @Service, @Slf4j e @RequiredArgsConstructor
-2. Injete EmbeddingService e EmbeddingMemory
-3. Tenha um método anotado com @PostConstruct chamado loadFAQs() que:
-   - Use PathMatchingResourcePatternResolver para buscar todos os arquivos .txt em "classpath:faq/*.txt"
-   - Leia cada arquivo de texto usando StandardCharsets.UTF_8
-   - Crie objetos Document com o conteúdo e nome do arquivo
-   - Chame embeddingService.embed() para gerar embeddings dos conteúdos
-   - Crie DocumentEmbedding para cada documento e adicione no embeddingMemory usando addEmbedding()
-   - Adicione logs informativos em cada etapa
-```
-
----
-
-## 🔍 Prompt 6: Implementar Método ask() do ChatService
+## 🔍 Prompt 4: Implementar Método ask() do ChatService
 
 ```
 Complete a implementação do método ask() na classe ChatService que recebe uma pergunta (String question) e um threshold de similaridade (float distance). O método deve:
@@ -85,7 +60,7 @@ Complete a implementação do método ask() na classe ChatService que recebe uma
 
 ---
 
-## 📋 Prompt 7: Implementar Método generateAnswer() do ChatService
+## 📋 Prompt 5: Implementar Método generateAnswer() do ChatService
 
 ```
 Complete a implementação do método privado generateAnswer() na classe ChatService que recebe uma pergunta (String question) e contexto (String context). O método deve:
@@ -100,7 +75,7 @@ Complete a implementação do método privado generateAnswer() na classe ChatSer
 
 ---
 
-## 🔎 Prompt 8: Implementar Método ask() do FAQService
+## 🔎 Prompt 6: Implementar Método ask() do FAQService
 
 ```
 Complete a implementação do método ask() na classe FAQService que recebe uma pergunta (String question) e um threshold (float distance). O método deve:
@@ -115,7 +90,7 @@ Complete a implementação do método ask() na classe FAQService que recebe uma 
 
 ---
 
-## 📝 Prompt 9: Implementar Método generateAnswer() do FAQService
+## 📝 Prompt 7: Implementar Método generateAnswer() do FAQService
 
 ```
 Complete a implementação do método privado generateAnswer() na classe FAQService que recebe uma pergunta (String question) e contexto (String context). O método deve:
@@ -130,15 +105,7 @@ Complete a implementação do método privado generateAnswer() na classe FAQServ
 
 ---
 
-## ✅ Ordem de Execução Recomendada
-
-1. **Prompt 1** - Adicionar dependências Maven
-2. **Prompt 2** - Configurar application.yml (adicionar sua API key)
-3. **Prompt 3** - Implementar EmbeddingService
-4. **Prompt 4** - Criar ProductLoaderService
-5. **Prompt 5** - Criar FAQLoaderService
-6. **Prompt 6 e 7** - Implementar ChatService completo
-7. **Prompt 8 e 9** - Implementar FAQService completo
+## ✅ Respeite a ordem de Execução Recomendada
 
 ---
 
